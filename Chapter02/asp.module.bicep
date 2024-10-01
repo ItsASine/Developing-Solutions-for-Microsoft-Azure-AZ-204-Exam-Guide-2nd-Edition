@@ -13,7 +13,7 @@ resource asp 'Microsoft.Web/serverfarms@2023-12-01' = {
   kind: kind
   tags: {}
   properties: {
-    reserved: false
+    reserved: kind == 'linux' ? true : false
     zoneRedundant: false
   }
   sku: {
